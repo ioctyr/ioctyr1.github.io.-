@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivación para Mi Amor</title>
+    <style>
+        body {
+            background-color: #e6f7ff;
+            color: #333;
+            font-family: 'Georgia', serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 2.8em;
+            color: #0073e6;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px auto;
+            width: 80%;
+            line-height: 1.8;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ff9933;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #cc6600;
+            transition: background-color 0.3s ease;
+        }
+        #randomMessage {
+            font-size: 1.5em;
+            color: #2e8b57;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola, mi inspiración! 🌟</h1>
+    <p>Haz clic en el botón para recibir un mensaje motivacional especialmente para ti.</p>
+    <button class="button" onclick="showRandomMessage()">Obtener mensaje motivacional ❤️</button>
+    <div id="randomMessage"></div>
+    <script>
+        const messages = [
+            "Eres más fuerte de lo que crees y más capaz de lo que imaginas.",
+            "Vamos, mi niña. No te rindas, vas muy bien, solo tienes que ver las cosas de diferente forma.",
+            "Todo fluye y refluye; todo tiene sus periodos de avance y retroceso, todo asciende y desciende; todo se mueve como un péndulo; la medida de su movimiento hacia la derecha es la misma que la de su movimiento hacia la izquierda; el ritmo es la compensación. No dudes mi capitana.",
+            "Confía en ti misma, porque tienes todo lo necesario para triunfar.",
+            "Cada pequeño paso que das te lleva más cerca de tus sueños.",
+            "La grandeza está en ti, solo tienes que creerlo.",
+            "Los desafíos son solo oportunidades disfrazadas. ¡Tú puedes con todo!",
+            "No llores mas mi pequeña, no ves que estas haciendo a Dios llorar...",
+            "Cuando necesites una mano; recuerda que estoy para ti.",
+            "Mira el sol, ese que te esta dando la oportunidad de volar... Miralo y se libre con el.",
+            "No siempre se puede hacer todo en un instante, fallaras pero eso no significa que seas un fracaso; eres una persona que esta viviendo y ahora que aprendes, vas a poder hacerlo mejor.",
+            "Cada desafío es más pequeño cuando estamos juntos. Estoy aquí para ti, siempre.",
+            "Recuerda que cada día es una nueva oportunidad para brillar, y tú brillas con luz propia.",
+            "Mírate con los mismos ojos con que te miro yo: con admiración, respeto y amor.",
+            "En los momentos en que dudes de ti misma, recuerda cuánto has logrado ya. Sigue adelante con confianza.",
+            "La ternura no es la virtud de los débiles, sino más bien todo lo contrario: denota fortaleza de ánimo y capacidad de atención, de compasión, de verdadera apertura al otro, de amor.",
+            "Hagamos ahora nuestro futuro y que nuestros sueños sean la realidad del mañana",
+            "Conmigo se condecora a aquellos jóvenes que como yo, tuvieron un sueño y lucharon por realizarlo, vencieron obstáculos, miedos, inseguridades y lograron ese sueño",
+        ]
+
+        function showRandomMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const randomMessage = messages[randomIndex];
+            document.getElementById("randomMessage").textContent = randomMessage;
+        }
+    </script>
+</body>
+</html>
